@@ -1,0 +1,43 @@
+<%- include('../../partials/header.ejs') %>
+
+<%- include('../../partials/Home-navbar.ejs') %>
+
+<div class="container">
+
+    <h1 style="text-align: center;">Ola bem-vindo</h1>
+    <p class="h4" style="text-align: center;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
+    
+    <% result.articles.rows.forEach(article => { %>
+        <hr>
+        <div class="card" style="display: flex;">
+            <div class="card-header">
+                <h1><%= article.title %> </h1>    
+            </div>
+            <div class="card-body">
+                <a href="/<%= article.slog %>" type="button" class="btn btn btn-outline-secondary">Ler mais</a>
+            </div>
+
+        </div>
+
+       
+    
+    <% }) %>
+
+    <div class="row">
+        <div class="col col-12">
+            <br>
+            <%if(result.page > 2){ %>
+                <a style="float: left;" href="/articles/page/ <%= result.page - 1 %> "><img src="https://img.icons8.com/ios-glyphs/45/000000/circled-chevron-left.png"/></a>
+            <% }else if(result.page == 2){ %>
+                <a style="float: left;" href="/"><img src="https://img.icons8.com/ios-glyphs/45/000000/circled-chevron-left.png"/></a>
+            <% } %>
+        
+
+            <%if(result.next){ %>
+                <a style="float: right;" href="/articles/page/ <%= result.page + 1 %> "><img src="https://img.icons8.com/ios-glyphs/45/000000/circled-chevron-right.png"/></a>
+           <% } %>
+        </div>
+        <hr>
+    </div>
+
+    <%- include('../../partials/footer.ejs') %>

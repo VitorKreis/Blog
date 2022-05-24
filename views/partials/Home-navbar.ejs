@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+        Programa-Blog
+    </a>
+    <ul class="navbar-nav ">
+
+        <% categories.forEach(category =>{ %>
+            <li class="nav-item" style="align-content: center;">
+                <a class="nav-link" style=" font-size: 18px; margin-right: 10px;" href="/categoria/<%= category.slog %>"> <%= category.title %></a>
+            </li>
+    
+        <% }) %>
+    </ul>
+
+</nav>

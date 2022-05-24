@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/Home-navbar.ejs') %>
+
+<div class="container">
+
+    <h1 style="text-align: center;">Ola bem-vindo</h1>
+    <p class="h4" style="text-align: center;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
+    
+    <% articles.forEach(article => { %>
+        <hr>
+        <div class="card" style="display: flex;">
+            <div class="card-header">
+                <h1><%= article.title %> </h1>    
+            </div>
+            <div class="card-body">
+                
+                <h5>Categoria: <a class="h5" style="text-decoration: none; color: black;"><%= categories.title %></a> </h5>
+
+                <a href="/<%= article.slog %>" type="button" class="btn btn btn-outline-secondary">Ler mais</a>
+            </div>
+
+        </div>
+    
+    <% }) %>
+
+    <div class="row">
+        <div class="col col-12">
+            <br>
+            <a style="float: right;" href="/articles/page/2"><img src="https://img.icons8.com/ios-glyphs/45/000000/circled-chevron-right.png"/></a> 
+            <br>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>
