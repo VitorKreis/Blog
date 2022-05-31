@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const connection = require('../DataBase-Mysql/Connection')
 
 
-const User = connection.define('Users', {
+const User = connection.define('users', {
     email:{
         type: Sequelize.STRING,
         allowNull: false

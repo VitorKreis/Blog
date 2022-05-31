@@ -2,14 +2,15 @@
 <%- include('../../partials/header.ejs') %>
 
 <%- include('../../partials/navbar.ejs') %>
+<body>
 
-<div class="container">
-
-    <hr>
-    <h1>Artigos:</h1>
+<div class="container" >
+    <br>
+    <h1>Artigos</h1>
     <a class="btn btn-dark" href="/admin/newArticle">Criar novo Artigo</a>
-    <hr>
-    <table class="table table-bordered table-striped table-hover">
+    <br>
+
+    <table class="table table-bordered table-striped table-hover"><br>
         <thead>
             <tr >
                 <th>Id</th>
@@ -29,7 +30,7 @@
                     <td><%= article.slog %></td>
                     <td><%= article.category.title %></td>
                     <td>
-                        <form method="post" action="/admin/delet/article" onsubmit="delet(event, this)" >
+                        <form method="post" action="/admin/delet/article" style="display: inline;" onsubmit="delet(event, this)" >
                             <input type="hidden" name="id" value="<%= article.id %>">
                             <button  class="btn btn-danger">Deletar</button>
                         </form>
@@ -41,6 +42,8 @@
         </tbody>
     </table>
 </div>
+
+</body>
 
 <%- include('../../partials/footer.ejs') %>
 <script>

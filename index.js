@@ -32,13 +32,35 @@ connection.authenticate().then(() =>{
 })
 
 //Congf cookies e seçoes
-app.use(session({
+ app.use(session({
     secret: "orl,vçfdshkckdsjeipwy",
-    cookie: {maxAge: 30000}
-}))
+  cookie: {maxAge: 3000000}
+ }))
+
+ 
+// //Rota session
+
+// app.get('/session', (req,res) =>{
+//     req.session.user = "SrCappuccino"
+//     req.session.email = "Vitor.1richter@gmail.com"
+//     req.session.id = 12
+//     req.session.you = {
+//         name: "Vitor Kreis",
+//         idade: 18,
+//         ano : 2022
+//     }
+//     res.send('Sessao criada')
+// })
 
 
-
+// app.get('/leitura', (req,res) =>{
+//     res.json({
+//         user: req.session.user,
+//         emial: req.session.email,
+//         id: req.session.id,
+//         you : req.session.you
+//     })
+// })
 
 //Rotas
 app.get('/', (req, res) =>{
