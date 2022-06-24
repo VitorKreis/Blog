@@ -3,7 +3,7 @@
 <%- include('../../partials/navbar.ejs') %>
 
 <div class="container">
-    <div style="margin-top: 12%;" class="card">
+    <div class="card m-4">
         <div class="card-header">
            <h1>Edicao de Artigo</h1>           
         </div>
@@ -35,8 +35,31 @@
     <%- articles.body %>
 </div>
 
-<%- include('../../partials/footer.ejs') %>
+</html>
 
+<style>
+
+body{
+        background-color: #0c0c0e;
+    }
+
+    
+    .card{
+        display: flex;
+        margin: auto;
+        padding: auto;
+        border: none;
+        box-shadow: 4px 8px 10px #a8a8b3;
+    }
+    .card-header{
+        background-color: #e1e1e6;
+        text-align: center;
+    }
+
+    .card-body{
+        background-color: #737380;
+    }
+</style>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 <script src="https://cdn.tiny.cloud/1/ty54twgixwp2zobx05tccgo0dueb3vss3g4m65rlai8fcjf9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <Script>
