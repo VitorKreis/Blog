@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow-lg" style="background-color: rgb(23, 23, 97);">
-    <a class="navbar-brand" href="/">
+<nav class="navbar navbar-expand">
+    <a class="navbar-brand" style="color: black;" href="/">
         Programa-Blog
     </a>
     <ul class="navbar-nav mx-auto ">
         <% categories.forEach(category =>{ %>
-            <li class="nav-item " style="align-content: center;">
-                <a class="nav-link mx-auto" style=" font-size: 18px;" href="/categoria/<%= category.slog %>"> <%= category.title %></a>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="/categoria/<%= category.slog %>"> <%= category.title %></a>
             </li>
     
         <% }) %>
@@ -13,14 +13,30 @@
     </ul>
     <ul class="navbar-nav">
         <li class="nav-item ">
-            <a style="display: inline;" name="login" href="/admin/login" class="btn btn-dark p-2  m-1">Login</a>
+            <a style="display: inline; background-color: #000000;color: white; box-shadow: 3px 3px 5px black;" name="login" href="/admin/login" class="btn p-2  m-1">Login</a>
 
-            <a style="display: inline;" name="Create" href="/admin/create/user" class="btn btn-dark p-2 m-1">Sing-up</a>
+            <a style="display: inline; background-color: #000000;color: white; box-shadow: 3px 3px 5px black;" name="Create" href="/admin/create/user" class="btn  p-2 m-1">Sing-up</a>
         </li>
         
     </ul>
 
 </nav>
+
+<style>
+
+    .navbar{
+        background-color: #392c54;
+
+        box-sizing: border-box;
+        box-shadow: 0px 0px 10px #8670ac;
+    }
+
+    .nav-link{
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+    }
+</style>
 
 
 

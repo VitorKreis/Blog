@@ -4,8 +4,8 @@
 
 <div class="container">
 
-    <h1 style="text-align: center;">Ola bem-vindo</h1>
-    <p class="h4" style="text-align: center;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
+    <h1 style="color: white; text-align: center;">Ola bem-vindo</h1>
+    <p class="h4" style="color: white; text-align: center;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
     
     <% result.articles.rows.forEach(article => { %>
         <hr>
@@ -14,7 +14,7 @@
                 <h1><%= article.title %> </h1>    
             </div>
             <div class="card-body">
-                <a href="/<%= article.slog %>" type="button" class="btn btn btn-outline-secondary">Ler mais</a>
+                <a href="/<%= article.slog %>" type="button" class="btn btn btn-dark">Ler mais</a>
             </div>
 
         </div>
@@ -39,5 +39,28 @@
         </div>
         <hr>
     </div>
+</html>
 
-    <%- include('../../partials/footer.ejs') %>
+<style>
+
+body{
+        background-color: #202024;
+    }
+
+    .card{
+        display: flex;
+        margin: auto;
+        padding: auto;
+
+        box-shadow: 10px 8px 5px #121214;
+    }
+    .card-header{
+        background-color: #e1e1e6;
+        text-align: center;
+    }
+
+    .card-body{
+        background-color: #737380;
+    }
+
+</style>

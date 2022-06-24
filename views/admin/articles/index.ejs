@@ -6,13 +6,13 @@
 
 <div class="container" >
     <br>
-    <h1>Artigos</h1>
+    <h1 style="color: white;">Artigos</h1>
     <a class="btn btn-dark" href="/admin/newArticle">Criar novo Artigo</a>
     <br>
 
     <table class="table table-bordered table-striped table-hover"><br>
         <thead>
-            <tr >
+            <tr>
                 <th>Id</th>
                 <th>Titulo</th>
                 <th>Slug</th>
@@ -30,9 +30,9 @@
                     <td><%= article.slog %></td>
                     <td><%= article.category.title %></td>
                     <td>
-                        <form method="post" action="/admin/delet/article" style="display: inline;" onsubmit="delet(event, this)" >
-                            <input type="hidden" name="id" value="<%= article.id %>">
-                            <button  class="btn btn-danger">Deletar</button>
+                        <form method="post" action="/admin/delet/article" onsubmit="delet(event, this)" >
+                            <input style="display: inline;" type="hidden" name="id" value="<%= article.id %>">
+                            <button style="display: inline;"  class="btn btn-danger">Deletar</button>
                         </form>
                         <a  class="btn btn-warning" href="/admin/uptade/<%= article.id %>">Editar</a>
                     </td>
@@ -45,7 +45,30 @@
 
 </body>
 
-<%- include('../../partials/footer.ejs') %>
+
+</html>
+
+<style>
+
+    body{
+        background-color: #0c0c0e;
+    }
+
+    .table{
+        background-color: white;
+        box-shadow: 2px 3px 10px #5b3992;
+    }
+
+    form{
+        display: inline;
+        margin: auto;
+        padding: auto;
+        align-items: baseline;
+    }
+</style>
+
+
+
 <script>
 
 function delet(event, form){

@@ -5,17 +5,17 @@
     
     <div class="container">
 
-        <h1 style="text-align: center; color: #000;">Ola bem-vindo</h1>
-        <p class="h4" style="text-align: center; color: #000;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
+        <h1 style="text-align: center; color: white;">Ola bem-vindo</h1>
+        <p class="h4" style="text-align: center; color: white;">Este e um blog feito para programadores criarem duvidas e sanarem duvidas!!</p>
         
         <% articles.forEach(article => { %>
             <br>
-            <div class="card p-3 shadow" style="display: flex; background-color: white; ">
-                <div class="card-header" style="text-align: center; background-color: rgba(218, 214, 214, 0.938); ">
-                    <h1><%= article.title %> </h1>    
+            <div class="card">
+                <div class="card-header">
+                    <h1 style="color: black;"><%= article.title %> </h1>    
                 </div>
-                <div class="card-body" style=" background-color: rgb(241, 244, 247);">
-                    <a href="/<%= article.slog %>" type="button" class="btn btn btn-outline-secondary m-2">Ler mais</a>
+                <div class="card-body">
+                    <a href="/<%= article.slog %>" type="button" class="btn btn-dark m-2">Ler mais</a>
                 </div>
 
             </div>
@@ -35,12 +35,29 @@
 </body>
 
 
+</html>
+
+
 <style>
 
     body{
-        background-color: rgb(42, 43, 53);
+        background-color: #202024;
+    }
+
+    .card{
+        display: flex;
+        margin: auto;
+        padding: auto;
+
+        box-shadow: 10px 8px 5px #121214;
+    }
+    .card-header{
+        background-color: #e1e1e6;
+        text-align: center;
+    }
+
+    .card-body{
+        background-color: #737380;
     }
 
 </style>
-
-<%- include('partials/footer.ejs') %>
